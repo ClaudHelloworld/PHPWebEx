@@ -17,10 +17,10 @@
 
   		  echo "<a href='create.php'>Criar</a><br/><br/>";
   		  // Cada iteração do loop abaixo obtém uma linha da tabela resultante do Select e envia seus dados ao navegador. $lin é uma vetor com índices correspondendo ao nome das colunas (id, nome, endereco) e contéudo com seus respectivos dados.
-        $lin = $cmp->fetch(PDO::FETCH_ASSOC);
+        $lin = $cmp->fetch(PDO::FETCH_NUM);
   		  while ($lin != null) {
-  		  	echo $lin['nome']." - ".$lin['endereco']." <a href='edit.php?id=".$lin['id']."'>Editar</a> <a href='delete.php?id=".$lin['id']."'>Excluir</a><br/>";
-          $lin = $cmp->fetch(PDO::FETCH_ASSOC);
+  		  	echo $lin[1]." - ".$lin[2]." <a href='edit.php?id=".$lin[0]."'>Editar</a> <a href='delete.php?id=".$lin['id']."'>Excluir</a><br/>";
+          $lin = $cmp->fetch(PDO::FETCH_NUM);
   		  }
 	?>
 </body>
