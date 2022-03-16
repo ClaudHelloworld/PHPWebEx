@@ -1,0 +1,34 @@
+Copiar pasta da aplicação ExercicioWeb para:
+c:\xampp\htdocs
+
+No Painel de Controle do Xampp, ativar:
+Apache
+Mysql
+
+Abrir phpmyadmin (endereço http://localhost), criar BD:
+escola
+
+Criar tabela "aluno": 
+create table aluno (id int not null primary key, nome varchar(100) not null, endereco varchar(100) not null)
+
+Abrir a aplicação:
+http://localhost/crudsimples
+
+Exercício
+
+Fase 1:
+
+a) Completar o código de delete.php, store.php e update.php
+
+b) Em index.php substituir PDO::FETCH_ASSOC por PDO::FETCH_NUM e adequar o código
+
+Fase 2:
+
+a) Adicionar coluna à tabela "aluno".
+alter table aluno add dataNasc date null
+
+b) Adequar todo o código a nova coluna.
+
+Extar:
+
+a) Adequar o layout usando bootstrap
